@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: CascadiaCode;
+    src: url(../public/font/CascadiaCodeNF-Regular.ttf);
+}
+
+* {
+    font-family: CascadiaCode, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}

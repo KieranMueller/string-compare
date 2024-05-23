@@ -1,0 +1,30 @@
+.box {
+    .compare-block {
+        display: flex;
+        align-items: center;
+        input {
+            width: 70px;
+            max-height: 20px;
+            margin-right: 20px;
+        }
+        .word-tag {
+            margin: 0;
+            transition: .2s;
+            cursor: pointer;
+            &:hover {
+                font-size: 17px;
+            }
+        }
+        .copy-span {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.571);
+            margin-left: 5px;
+            border-radius: 5px;
+            padding: 3px 10px;
+        }
+    }
+}
+
+.bg-green {
+    background-color: lightgreen;
+}

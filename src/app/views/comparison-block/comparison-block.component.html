@@ -1,0 +1,10 @@
+<div class="box">
+    <div *ngFor="let word of words; let i = index" class="compare-block">
+        <!-- <img src="../../../../public/icons/trash-icon.png" alt="delete icon"> -->
+        <input type="text" [placeholder]="'word ' + (i + 1)" [(ngModel)]="word.word">
+        <p class="word-tag" [ngClass]="{'bg-green': allEqual}" (click)="copy(i)">{{word.word}}</p>
+        <span [hidden]="!word.copied" class="copy-span">copied</span>
+    </div>
+    <button (click)="addInput()">add</button>
+    <button (click)="test()">test</button>
+</div>

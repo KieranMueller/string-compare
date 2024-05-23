@@ -1,0 +1,20 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .settings-div {
+        position: absolute;
+        left: 20px;
+        .case-sensitive {
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    }
+    .header {
+        margin: 10px;
+    }
+}
+
+.inactive {
+    opacity: 0.4;
+}
