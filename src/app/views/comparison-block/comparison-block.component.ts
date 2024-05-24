@@ -28,6 +28,7 @@ export class ComparisonBlockComponent implements OnInit {
 
   @HostListener('window:keyup', ['$event'])
   @HostListener('window:click', ['$event'])
+  @HostListener('window:paste', ['$event'])
   onEvent($event: any) {
     if ($event.target.classList[0] === 'word-tag') return
     this.words.forEach(obj => {
