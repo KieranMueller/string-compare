@@ -1,0 +1,8 @@
+<app-top-bar></app-top-bar>
+<div class="box">
+    <div *ngFor="let num of blocks">
+        <app-comparison-block></app-comparison-block>
+        <hr>
+    </div>
+    <button (click)="addComparisonBlock()">new group</button>
+</div>

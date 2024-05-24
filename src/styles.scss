@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-grey: rgb(240, 240, 240);
+}
+
+@font-face {
+    font-family: CascadiaCode;
+    src: url(./assets/font/CascadiaCodeNF-Regular.ttf);
+}
+
+* {
+    font-family: CascadiaCode, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+button {
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: 0.2s;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.089);
+    }
+}

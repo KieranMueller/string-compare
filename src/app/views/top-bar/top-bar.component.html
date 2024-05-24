@@ -1,0 +1,10 @@
+<div class="box">
+    <div class="settings-div">
+        <button (click)="routeBetweenAboutAndHome()">{{aboutBtnText}}</button>
+        <div class="case-sensitive-box">
+            <button (click)="toggle()" [ngClass]="{'case-sensitive': true, inactive: !status}">case sensitive: {{status ? 'on' : 'off'}}</button>
+        </div>
+    </div>
+    <h1 class="header">String Compare</h1>
+    <h3>By Kieran M.</h3>
+</div>

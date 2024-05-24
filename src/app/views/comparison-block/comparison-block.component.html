@@ -1,0 +1,20 @@
+<div class="box">
+    <div *ngFor="let obj of words; let i = index" class="compare-block">
+        <div *ngIf="i > 0" class="trash-icon" (click)="deleteInput(i)">🗑️</div>
+        <div class="box1">
+            <input type="text" [placeholder]="i > 0 ? 'string ' + (i + 1) : 'base string'" [(ngModel)]="obj.word">
+            <span class="check-mark" *ngIf="obj.equalsBase && i > 0 && obj.word.trim()">✅</span>
+            <span class="check-mark" *ngIf="!obj.equalsBase && i > 0 && obj.word.trim()">❌</span>
+        </div>
+        <div class="box2">
+            <span [hidden]="!obj.copied" class="copy-span">copied</span>
+            <p
+            *ngFor="let char of obj.word.split(''); let j = index" class="word-tag"
+            [ngClass]="{'bg-green': this.words[i].equalsBase, 
+            'bg-red': this.isCaseSensitive ? char !== words[0].word.charAt(j) : char.toLowerCase() != words[0].word.charAt(j).toLowerCase()}"
+            (click)="copy(i)"
+            >{{char == ' ' ? '_' : char}}</p>
+        </div>
+    </div>
+    <button class="add-btn" (click)="addInput()">add</button>
+</div>

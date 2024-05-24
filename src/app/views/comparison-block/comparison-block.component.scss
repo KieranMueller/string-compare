@@ -1,0 +1,58 @@
+.box {
+    overflow-x: auto;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    .compare-block {
+        display: flex;
+        align-items: center;
+        .trash-icon {
+            cursor: pointer;
+            width: fit-content;
+            position: absolute;
+            left: 10px;
+        }
+        .box1 {
+            position: relative;
+            display: flex;
+            input {
+                width: 90px;
+                max-height: 20px;
+                margin-right: 23px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                border: 1px solid black;
+                border-radius: 3px;
+                padding: 5px;
+            }
+            .check-mark {
+                position: absolute;
+                right: 0px;
+                top: 4px;
+            }
+        }
+        .box2 {
+            display: flex;
+            transition: 0.1s;
+            .word-tag {
+                margin: 0;
+                transition: .2s;
+                cursor: pointer;
+            }
+            .copy-span {
+                color: white;
+                background-color: rgba(0, 0, 0, 0.571);
+                margin-right: 5px;
+                border-radius: 5px;
+                padding: 3px 10px;
+            }
+        }
+    }
+}
+
+.bg-green {
+    background-color: lightgreen;
+}
+
+.bg-red {
+    background-color: lightcoral;
+}
