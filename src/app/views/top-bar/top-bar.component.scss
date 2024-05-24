@@ -1,13 +1,17 @@
 .box {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 5px 10px;
+    overflow: auto;
     .settings-div {
-        position: absolute;
-        left: 20px;
-        .case-sensitive {
-            transition: 0.2s;
-            cursor: pointer;
+        width: 180px;
+        .case-sensitive-box {
+            margin-top: 5px;
+            .case-sensitive {
+                transition: 0.2s;
+                cursor: pointer;
+            }
         }
     }
     .header {
