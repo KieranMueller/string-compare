@@ -2,7 +2,7 @@
     <div *ngFor="let obj of words; let i = index" class="compare-block">
         <div *ngIf="i > 0" class="trash-icon" (click)="deleteInput(i)">🗑️</div>
         <div class="box1">
-            <input type="text" [placeholder]="i > 0 ? 'string ' + (i + 1) : 'base string'" [(ngModel)]="obj.word">
+            <input type="text" [placeholder]="i > 0 ? 'string ' + (i + 1) : 'base string'" [(ngModel)]="obj.word" (ngModelChange)="test()">
             <span class="check-mark" *ngIf="obj.equalsBase && i > 0 && obj.word.trim()">✅</span>
             <span class="check-mark" *ngIf="!obj.equalsBase && i > 0 && obj.word.trim()">❌</span>
         </div>

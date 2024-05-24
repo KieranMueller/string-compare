@@ -30,7 +30,9 @@ export class ComparisonBlockComponent implements OnInit {
   @HostListener('window:click', ['$event'])
   @HostListener('window:paste', ['$event'])
   onEvent($event: any) {
-    if ($event.target.classList[0] === 'word-tag') return
+    if ($event) {
+      if ($event.target.classList[0] === 'word-tag') return
+    }
     this.words.forEach(obj => {
       if (this.isCaseSensitive) {
         if (obj.word.trim() === this.words[0].word.trim()) {
@@ -58,5 +60,9 @@ export class ComparisonBlockComponent implements OnInit {
     setTimeout(() => {
       this.words[index].copied = false
     }, 800)
+  }
+
+  test() {
+    this.onEvent(null)
   }
 }
